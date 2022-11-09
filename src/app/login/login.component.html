@@ -1,3 +1,20 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">My Bank</a>
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </form>
+    </div>
+  </nav>
 <div class="wrapper">
     <div class="logo">
         <img src="../../assets/images/bank.png" alt="">
@@ -8,14 +25,14 @@
     <h6>{{aim}}</h6>
     <form class="p-3 mt-3">
         <div class="form-field d-flex align-items-center">
-            <input (change)="acnoChange($event)" type="text" name="acno" id="login_acno" [placeholder]="accounts">
+            <input [(ngModel)]="acno" type="text" name="acno" id="login_acno" [placeholder]="accounts">
         </div>
         <div class="form-field d-flex align-items-center">
-            <input (change)="pswdChange($event)" type="password" name="password" id="login_pswd" placeholder="Password">
+            <input [(ngModel)]="pswd" type="password" name="password" id="login_pswd" placeholder="Password">
         </div>
         <button class="btn mt-3" (click)="login()" type="button" >Login</button>
     </form>
     <div class="text-center fs-5 mt-3">
-        <a href="#">Forget password?</a> or <a href="./signup.html">Sign up</a>
+        <a href="#">Forget password?</a> or <a routerLink="register">Sign up</a>
     </div>
 </div>
